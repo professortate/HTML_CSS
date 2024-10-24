@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+     content="width=device-width, 
+    initial-scale=1.0">
+    <title>playBalls</title>
+
+    <link rel="stylesheet" href="button.css">
+    
+</head>
+<body>
+    <div class="button">
+    <h2>Press any button</h2>
+    <button class="btn btn1" onclick="navigateToPlay()"><h4>Play</h4></button>
+
+    <script>
+        function navigateToPlay() {
+          window.location.href = "play.html"; // Replace with your desired URL
+        }
+      </script>
+    <button class ="btn btn2" onclick="navigateToPause()"><h3>Pause</h3></button>
+
+    <script>
+        function navigateToPause() {
+          window.location.href = "pause.html"; // Replace with your desired URL
+        }
+      </script>
+    <button class="btn btn3" onclick="navigateToResume()"><h4>Resume</h4></button>
+
+<script>
+    function navigateToResume() {
+      window.location.href = "resume.html"; // Replace with your desired URL
+    }
+  </script>
+  </div>
+
+  <div class="box"></div>
+  </body>
+</html>

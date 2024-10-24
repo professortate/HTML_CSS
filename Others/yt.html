@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webDemo</title>
+    <link rel="stylesheet" href="web.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <nav class="navbar">
+        <!-- Your navigation code -->
+    </nav>
+
+    <div class="progress-bar">
+        <!-- Your progress bar code -->
+    </div>
+
+    <main class="contents">
+        <!-- Your existing HTML content -->
+        <section class="container">
+            <h1>Recommended videos</h1>
+            <div class="video-container" id="recommended-videos">
+                <!-- Videos will be dynamically added here -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Your existing JavaScript code -->
+
+    <script>
+        // Fetch videos from YouTube API
+        fetch('hhttps://www.googleapis.com/youtube/v3/playlistItems?part=snippet&maxResults=50&playlistId=PLB03EA9545DD188C3&key=MY_API_KEY')
+        .then(response => response.json())
+        .then(data => {
+            const videos = data.items;
+            const videoContainer = document.getElementById('recommended-videos');
+            
+            videos.forEach(video => {
+                const videoId = video.id.videoId;
+                const videoTitle = video.snippet.title;
+                const videoThumbnail = video.snippet.thumbnails.medium.url;
+
+                const videoElement = document.createElement('div');
+                videoElement.classList.add('video');
+                videoElement.innerHTML = `
+                    <iframe width="450" height="315" src="https://www.youtube.com/embed/${videoId}" title="${videoTitle}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                `;
+
+                videoContainer.appendChild(videoElement);
+            });
+        })
+        .catch(error => console.error('Error fetching videos:', error));
+    </script>
+</body>
+</html>

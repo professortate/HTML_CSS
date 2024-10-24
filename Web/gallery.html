@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery</title>
+    <link rel="stylesheet" href="web.css" />
+    <link rel="stylesheet" href="gallery.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <h2>TATE</h2>
+      </div>
+      <ul class="nav-list">
+        <li><a href="web.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a class="active" href="gallery.html">Gallery</a></li>
+      </ul>
+      <a class="cta" href="contact.html"><button>Login</button></a>
+
+              <!-- for menu  -->
+
+              <div class="menu-toggle" onclick="toggleMenu()">
+                <img src="./images/menu-icon.png" alt="Menu" class="menu-icon">
+              </div>
+
+
+    </nav>
+
+    <div class="progress-bar">
+      <div class="progress-line"></div>
+    </div>
+
+    <main class="contents">
+      <section class="section-1">
+        <h1>Gallery</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque ipsa
+          repellendus asperiores quod, possimus ab consequuntur, nam optio neque
+          esse culpa, voluptate delectus quidem? Explicabo aut unde atque.
+          Commodi, laborum!lado
+        </p>
+        <div class="gallery">
+          <div class="image-container">
+            <img src="./images/img1.jpg" alt="Image 1" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img2.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img3.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img4.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img5.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img6.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img7.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img8.jpg" alt="Image 2" />
+          </div>
+
+          <div class="image-container">
+            <img src="./images/img1.jpg" alt="Image 1" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img2.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img3.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img4.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/ad3.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img6.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img7.jpg" alt="Image 2" />
+          </div>
+          <div class="image-container">
+            <img src="./images/img8.jpg" alt="Image 2" />
+          </div>
+        </div>
+      </section>
+
+      <!-- Add more sections or content as needed -->
+    </main>
+
+    <footer>
+      <nav class="bottom-navbar">
+        <ul>
+          <li><a href="https://facebook.com"><img src="./images/facebook.png" alt="Facebook"></a></li>
+          <li><a href="https://twitter.com"><img src="./images/twitter.png" alt="Twitter"></a></li>
+          <li><a href="https://instagram.com"><img src="./images/instagram.png" alt="Instagram"></a></li>
+          <li><a href="https://linkedin.com"><img src="./images/linkedin.png" alt="LinkedIn"></a></li>
+        </ul>
+      </nav>
+      <div class="copyright">
+        &copy; 2024 TATE | Created by Professor Tate
+      </div>
+    </footer>
+
+    
+
+    <script type="text/javascript">
+      let progressBar = document.querySelector(".progress-line");
+      window.addEventListener("scroll", function () {
+        let pageScrolled = document.documentElement.scrollTop;
+        let height =
+          document.documentElement.scrollHeight -
+          document.documentElement.clientHeight;
+        progressBar.style.width = `${(pageScrolled / height) * 100}%`;
+      });
+    </script>
+
+
+<!-- adjustment for small screen {menu} -->
+<script>
+  function toggleMenu() {
+    var navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
+  }
+  
+  
+  
+  </script>
+  </body>
+</html>

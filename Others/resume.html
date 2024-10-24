@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="button.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+    display: flex;
+    justify-content: center; /* Center aligns horizontally */
+    align-items: center; /* Center aligns vertically */
+    height: 100vh; /* Makes the body full height of the viewport */
+    background-color:rgba(154,218,216,255);
+    /* background-image: url('giphy.gif'); /* Background image */
+    /* background-size: cover; Cover the entire background */
+    /* background-repeat: no-repeat; Do not repeat the background image */ */
+}
+
+
+        h3 {
+            text-align: center; /* Center aligns text horizontally */
+            color: red; /* Example of additional style */
+            font-size: 24px; /* Example of additional style */
+        }
+
+        img {
+            text-align: center; /* Center aligns text horizontally */
+            
+        }
+    </style>
+    
+</head>
+<body>
+    
+    <!-- <h1> Resumed..</h1> -->
+    <img src="gif1.gif" alt="GIF Example">
+
+    <button class ="btn btn2" onclick="navigateToPause()"><h3>Pause</h3></button>
+
+    <script>
+        function navigateToPause() {
+          window.location.href = "pause.html"; // Replace with your desired URL
+        }
+      </script>
+</body>
+</html>

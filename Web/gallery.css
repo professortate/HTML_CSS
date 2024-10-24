@@ -1,0 +1,15 @@
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Two columns with minimum width of 300px */
+    gap: 20px; /* Gap between grid items */
+  }
+  
+  .image-container {
+    width: 100%; /* Ensure images take up full width of their container */
+  }
+  
+  .image-container img {
+    width: 100%; /* Ensure images take up full width of their container */
+    height: auto; /* Maintain aspect ratio */
+  }
+  

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="button.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center; /* Center aligns horizontally */
+            align-items: center; /* Center aligns vertically */
+            height: 100vh; /* Makes the body full height of the viewport */
+        }
+
+        h3 {
+            text-align: center; /* Center aligns text horizontally */
+            color: red; /* Example of additional style */
+            font-size: 24px; /* Example of additional style */
+        }
+        .spoiler{
+            filter:blur(5px);
+            font-size: 14px;
+        }
+
+        .spoiler:active{
+            filter:none;
+        }
+
+      
+    </style>
+</head>
+<body>
+     <h3 class ="spoiler">You fucker really wanna play ..play my balls</h3><br>
+    <img src="gif1.gif" alt="GIF Example">
+
+    <button class ="btn btn2" onclick="navigateToPause()"><h3>Pause</h3></button>
+
+    <script>
+        function navigateToPause() {
+          window.location.href = "pause.html"; // Replace with your desired URL
+        }
+      </script>
+</body>
+</body>
+</html>
